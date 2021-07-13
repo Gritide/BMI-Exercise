@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        app:srcCompat="@drawable/instagram_user_filled_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvLevel"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="-9dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:fontFamily="@font/merriweather"
+        android:textSize="20sp"
+        tools:text="@string/username" />
+
+    <TextView
+        android:id="@+id/tvLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rvStats"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:fontFamily="@font/merriweather"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvLevel"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="-5dp"
+        android:fontFamily="@font/merriweather"
+        android:hint="@string/height"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rvStats"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/merriweather"
+        android:hint="@string/weight"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvBMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="0dp"
+        android:fontFamily="@font/merriweather"
+        android:hint="bmi"
+        android:textSize="16sp" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvStats"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProfileExercise"
+            android:layout_width="410dp"
+            android:layout_height="217dp"
+            android:layout_below="@+id/rvStats"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="0dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
